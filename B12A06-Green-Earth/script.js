@@ -154,9 +154,9 @@ const displayCart = (cartArr) => {
   cartArr.forEach(cart => {
     
     const div = document.createElement("div")
-    div.innerHTML = `<div class="flex bg-white px-3 py-3 rounded-lg  justify-between">
+    div.innerHTML = `<div class="flex bg-white px-1 py-3 rounded-lg  justify-between">
       <div>
-      <div class="max-w-24 max-h-20 sm:hidden lg:block  overflow-hidden rounded-md">
+      <div class="max-w-16 max-h-20 sm:hidden lg:block  overflow-hidden rounded-md">
       <img class="w-full h-full object-cover " src="${cart.image}" alt="" />
       </div>
 
@@ -170,7 +170,7 @@ const displayCart = (cartArr) => {
       
       <div class="flex flex-col justify-between ">
       <button onclick="removeFromCart(${cart.id})" class="hover:cursor-pointer text-right">❌</button>
-      <h3 class="lg:font-semibold text-lg md:text-base lg:text-lg text-right">${cart.name}</h3>
+      <h3 class="text-right font-semibold">${cart.name}</h3>
       <p class="text-right">৳ <span>${cart.price}</span></p>
       </div>
     </div>`
@@ -229,6 +229,7 @@ const displayCards = (cardsData) => {
   cardsData.forEach((card) => {
 
     const div = document.createElement("div");
+    div.classList.add("h-auto")
 
     div.innerHTML += `
     <div id="${card.id}" class="card   bg-base-100  shadow-sm h-full">
