@@ -1,37 +1,76 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-006
+# Green Earth - Plant a Tree Campaign
 
-### 📅 Deadline For 60 marks: 9th September, 2025 (11:59 pm ⏱️)
-
-### 📅 Deadline For 50 marks : 13th September , 2025 (6:00 pm⏱️)
-
-### 📅 Deadline For 30 marks: Any time after 13the September , 2025 (6:01 pm⏱️).
+A responsive web app for a tree-planting campaign. Browse trees, view details, add to cart, and see your impact!
 
 ---
-# Green Earth
+## 📚 Q&A
 
+### 1. What is the difference between `var`, `let`, and `const`?
 
-## Private Repository: https://classroom.github.com/a/nVZrg5R9 
+- **var** is funtion-scoped. A var variable is accessible anywhere within the function where it's decared, even if declared inside a block. It can be redclared or reassigned, hoisted .
 
-## Alternative Private Repository: https://classroom.github.com/a/KCGI14ST 
+- **let:** is block-scoped . It is only accrssible within the specific block of code where they are defined. It can be reassigned but not redclared in same scope.
 
-## Alternative Private Repository: https://classroom.github.com/a/JMuIYqgK 
-
-
+- **const:** is block-scoped . It is also only accrssible within the specific block of code where they are defined . It can be cannot be reassigned or redeclared. Must be initialized.
 ---
-🌴 API Endpoints
+
+
+### 2. What is the difference between `map()`, `forEach()`, and `filter()`?
+
+- **map():** iterates over each element in an array and executes a provided callback function for each element and returns a new array with transfered elements.
+
+- **forEach():** iterates over each element in an array and executes a provided callback function for each element and return `undefined`.It don't create a new array or modify the original array .
+
+- **filter():** creates a new array containing only the elements from the original array that satisfy a specific condition . 
+
+
+### 3. What are arrow functions in ES6?
+Arrow functions are a new way to write fuctions in JavaScript , introduced in ES6 . They offer a more concious syntax compare to traditional function expressions and handle `this` keyword differently.
+
+```javascript
+cosnt multiple = (x,y)=>x*y;
+```
+
+### 4. How does destructuring assignment work in ES6?
+Destructuring assignment in ES6 is a JavaScript expression that allows you to unpack values from arrays, or properties from objects, into distinct variables.
+
+- **Array Destructuring** we use square brackets [] on the left-hand side of an assignment to declare variables that will receive values from an array on the right-hand side.The variables are assigned based on their position (index) in the array.
+```javascript
+const [a,b,c] = [54,564,984];
+```
+
+- **Object Destructuring** we use curly braces {} on the left-hand side of an assignment to declare variables that will receive properties from an object on the right-hand side.The variables are assigned based on matching property names.
+```javascript 
+const {name,age} = {name:"Masud",age:24};
+
+```
+
+### 5. Explain template literals in ES6. How are they different from string concatenation?
+
+Template literals are strings enclosed by backticks (`` ` ` ``) instead of single or double quotes.We van embed variable or JavaScript expressions directly within the string using the ${} syntext.
+```javascript
+const welcomeMsg = `Welcome ${name} in programming world.`
+```
+It also support multi-line strings and are more readable . 
+```javascript 
+const multiLines = `This is first line .
+And this is second line of code `
+```
+
+
+## 🌴 API Endpoints
 ---
-1. Get 🌴All Plants
+- **Get 🌴All Plants**
 ```bash
 https://openapi.programming-hero.com/api/plants
 ```
 
-2. Get 🌴All categories <br/>
+- **Get 🌴All categories**
 ```bash
 https://openapi.programming-hero.com/api/categories
 ```
 
-
-3. Get 🌴plants by categories <br/>
+- **Get 🌴plants by categories**
 ```bash
 https://openapi.programming-hero.com/api/category/${id}
 ```
@@ -40,7 +79,7 @@ https://openapi.programming-hero.com/api/category/${id}
 https://openapi.programming-hero.com/api/category/1
 ```
 
-4. Get 🌴Plants Detail <br/>
+- **Get 🌴Plants Detail**
 
 ```bash
 https://openapi.programming-hero.com/api/plant/${id}
@@ -56,114 +95,83 @@ https://openapi.programming-hero.com/api/plant/1
 
 ## ✅ Main Requirements 
 
-#### 1) Navbar
+1. **Navbar**
 
-- Website **logo/name** on the **left**  
-- **Menu items** in the **center** 
-- **Plant a Tree button** on the **right** 
+   - Logo/name (left)
+   - Menu items (center)
+   - "Plant a Tree" button (right)
+2. **Banner**
+   - Background image
+   - Title & subtitle
+   - Centered button
+3. **About Campaign** 
+   - Background image
+   - Title & subtitle
+   - Centered button  
 
-#### 2) Banner 
-- A **background image**  
-- A **title** and **subtitle**  
-- A **centered button**  
+4. **Our Impact Section**
+   - Section heading
+   - Image (left), text (right)  
 
-#### 3) About Campaign
-- **Section heading**  
-- **Image on the left**, **text on the right**  
+5. **Plant a Tree Today & Footer** 
+   - Form: Name, Email, Number of Trees
+   - Footer with copyright 
 
-#### 4) Our Impact Section 
-- Show **3 cards** with campaign **statistics**  
+6. **Responsiveness**
+   - Mobile-friendly design 
+---
 
-#### 5) Plant a Tree Today Section & Footer
-- **Form**: Name, Email, Number of Trees  
-- **Footer** with copyright info 
 
-#### 6) Responsiveness 
-- Website must be **mobile responsive**  
+
+## ⚙️ Functionalities
+
+- **Category Loading:**  
+  Loads tree categories dynamically (left sidebar).
+- **Category Click:**  
+  Loads trees for selected category.
+- **Card Layout:**  
+  3-column responsive grid.
+- **Card Contents:**  
+  Image, name, description, category, price, Add to Cart button.
+- **Modal:**  
+  Click tree name for full details in modal.
+- **Add to Cart:**  
+  Adds tree to cart, shows name.
+- **Total Calculation:**  
+  Calculates total price in cart.
+- **Remove from Cart:**  
+  ❌ button removes tree and updates total.
+- **Loading Spinner:**  
+  Shows spinner while loading data.
+- **Active Button State:**  
+  Highlights selected category.
 
 ---
-#### 7) Create a README file to answer the following question-
 
+## 🧪 Challenges
 
-#### 1) What is the difference between var, let, and const?
-
-#### 2) What is the difference between map(), forEach(), and filter()? 
-
-#### 3) What are arrow functions in ES6?
-
-#### 4) How does destructuring assignment work in ES6?
-
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
-
-## ⚙️ Functionalities 
-
-1) Category Loading 
-Load Tree Categories dynamically on the left side.
-
-2) Category Click → Tree Data 
-On clicking a category: load trees of that category.
-
-Display in a 3-column card layout.
-
-3) Card Contents 
- Each card includes:
-
-        - Image
-
-        -  Name
-
-        - Short description
-
-        - Category
-
-        - Price
-
-        - Add to Cart button
-
-4) Modal on Card Click 
-Clicking a tree name on a card opens a modal with full tree details.
-
-
-##  🧪 Challenges 
-
-
-    1) Add to Cart 
-    Clicking Add to Cart: - Adds the tree to Cart List
-                          - Shows tree name 
-
-    2) Total Calculation 
-    Calculate total price of trees in cart.
-
-    3) Remove from Cart 
-    Clicking ❌ removes tree and deducts price from total.
-
-    4) Loading Spinner
-    Show spinner while data is loading.
-
-    5) Active Button State 
-    Highlight active category button when selected.
-
-
-
-🧰 Technology Stack:
-        
-        HTML
-
-        CSS (Vanilla / Tailwind / DaisyUI)
-
-        JavaScript (Vanilla only, no frameworks)
-
-📌 Rules
-✅ At least 5 meaningful commits
-
-❌ No dummy text or Lorem Ipsum — must use relevant content
-
-
-
-
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
+- Add to Cart
+- Total Calculation
+- Remove from Cart
+- Loading Spinner
+- Active Button State
 
 ---
+
+## 🧰 Technology Stack
+
+- HTML
+- CSS (Tailwind/DaisyUI)
+- JavaScript (Vanilla)
+
+---
+
+## 📱 Responsive Design
+
+Works on mobile and desktop.
+
+---
+
+## ©️ Copyright
+
+Green Earth Campaign &copy; 2025. All rights reserved.
