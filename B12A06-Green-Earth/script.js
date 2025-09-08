@@ -23,15 +23,7 @@ const showCardLoading = (istrue) => {
     `
   }
 };
-const showModalLoading = (istrue) => {
-  if (istrue === true) {
-    modalBox.innerHTML = `
-    <div class="flex w-full mx-auto justify-center items-center  lg:col-span-3">
-    <span class="loading w-20 h-20 loading-spinner text-secondary"></span>
-    </div>
-    `
-  }
-};
+
 
 const loadCatgories = async () => {
   try {
